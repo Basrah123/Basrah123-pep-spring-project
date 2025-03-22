@@ -95,7 +95,6 @@ public class SocialMediaController {
         }
 
         boolean deleted = messageService.deleteMessage(messageId);
-        
         if (deleted) {
             return new ResponseEntity<>(1, HttpStatus.OK); 
         }
