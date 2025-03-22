@@ -90,7 +90,6 @@ public class SocialMediaController {
     @DeleteMapping("/messages/{messageId}")
     public ResponseEntity<Integer> deleteMessage(@PathVariable Integer messageId) {
         Optional<Message> message = messageService.getMessageById(messageId);
-
         if (message.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.OK); 
         }
